@@ -1,0 +1,30 @@
+{
+  "name": "pqnorthstarserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "../src/server.ts",
+  "scripts": {
+    "lint": "tslint --project '.'",
+    "start-dev": "tsc && node ./build/server.js",
+    "start-prod": "tsc && set NODE_ENV=production && node ./build/server.js",
+    "test-init": "node node_modules/jasmine/bin/jasmine.js init",
+    "test": "jasmine",
+    "test-cover": "istanbul cover --include-all-sources --root ./build/controllers/ node_modules/jasmine/bin/jasmine.js && start ./coverage/lcov-report/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^11.9.5",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "istanbul": "^0.4.5",
+    "jasmine": "^3.3.1",
+    "jasmine-spec-reporter": "^4.2.1",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.3333"
+  }
+}
